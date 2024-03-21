@@ -1,0 +1,19 @@
+on: [push]
+
+jobs:
+  build-latex:
+    runs-on: ubuntu-latest
+    name: Build latex
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Build latex
+        id: build-latex-step
+        uses: rn7cvj-dvfu/3-semester-web-lab-5@main
+        with:
+          file-path: ./
+
+      - name: Get the status
+        run: echo "Status is success ${{ steps.build-latex-step.outputs.is-success }}"
