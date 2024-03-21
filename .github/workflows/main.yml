@@ -13,7 +13,7 @@ jobs:
         id: build-latex-step
         uses: rn7cvj-dvfu/3-semester-web-lab-5@main
         with:
-          file-path: ./
+          file-path: main.tex
 
       - name: Get the status
         run: echo "Status is success ${{ steps.build-latex-step.outputs.is-success }}"
