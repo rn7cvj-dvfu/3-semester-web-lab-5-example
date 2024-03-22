@@ -13,7 +13,8 @@ jobs:
         id: build-latex-step
         uses: rn7cvj-dvfu/3-semester-web-lab-5@main
         with:
-          file-path: main.tex
+          files: main.tex, main.tex
+          repo-token: "${{ secrets.GITHUB_TOKEN }}"
 
       - name: Get the status
         run: echo "Status is success ${{ steps.build-latex-step.outputs.is-success }}"
