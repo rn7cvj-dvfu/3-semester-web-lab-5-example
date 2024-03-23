@@ -5,12 +5,11 @@ jobs:
     runs-on: ubuntu-latest
     name: Build latex
     steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v3
+    
 
-      - name: Checkout
-        uses: actions/checkout@v2
-
-      - name: Build latex
-        id: build-latex-step
+      - name: 📄🔍 Build latex and release
         uses: rn7cvj-dvfu/3-semester-web-lab-5@main
         with:
           files: main.tex
