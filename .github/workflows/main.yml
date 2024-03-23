@@ -13,5 +13,5 @@ jobs:
         id: build-latex-step
         uses: rn7cvj-dvfu/3-semester-web-lab-5@main
         with:
-          files: main.tex, main.tex
+          files: main.tex
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
