@@ -14,3 +14,4 @@ jobs:
         with:
           files: main.tex
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
+          data-path:  "${{ github.workspace }}"
